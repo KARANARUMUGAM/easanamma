@@ -1,27 +1,25 @@
-import { Sparkles, Heart, BookOpen, Users } from "lucide-react"
-
 export function PracticesSection() {
   const practices = [
     {
-      icon: Sparkles,
+      image: "/sp-1.png",
       title: "Meditation & Dhyana",
       description:
         "Daily guided meditation sessions to connect with your inner divine consciousness and achieve mental clarity.",
     },
     {
-      icon: Heart,
+      image: "/sp-2.png",
       title: "Bhakti Yoga",
       description:
         "Devotional practices and chanting to cultivate love, surrender, and spiritual connection with the divine.",
     },
     {
-      icon: BookOpen,
+      image: "/sp-3.png",
       title: "Scriptural Study",
       description:
         "Deep exploration of Tamil Siddhar texts, Vedas, and sacred scriptures to understand ancient wisdom.",
     },
     {
-      icon: Users,
+      image: "/sp-4.png",
       title: "Satsang",
       description:
         "Community gatherings for spiritual discourse, sharing experiences, and collective growth in consciousness.",
@@ -44,8 +42,8 @@ export function PracticesSection() {
               key={index}
               className="bg-card p-6 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <practice.icon className="w-6 h-6 text-primary" />
+              <div className="mb-4">
+                <img src={practice.image} alt={practice.title} className="w-20 h-20 object-contain" />
               </div>
               <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">{practice.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{practice.description}</p>

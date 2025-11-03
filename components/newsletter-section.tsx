@@ -22,29 +22,9 @@ export function NewsletterSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Card className="max-w-2xl mx-auto border-2 border-accent divine-glow bg-card">
           <CardContent className="pt-8 pb-8">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-primary text-center mb-4">
-              Stay Connected with Divine Wisdom
-            </h2>
-            <p className="text-center text-foreground/70 mb-6">
+            <p className="text-center text-foreground/70">
               Receive spiritual insights and updates from the Gurukulam
             </p>
-
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-1 border-primary/30 focus:border-primary"
-              />
-              <Button
-                type="submit"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground divine-glow-hover"
-              >
-                Subscribe
-              </Button>
-            </form>
           </CardContent>
         </Card>
       </div>

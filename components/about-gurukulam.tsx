@@ -43,8 +43,8 @@ export function AboutGurukulam() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
             {features.map((feature) => (
               <div key={feature.title} className="flex flex-col items-center">
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-4 divine-glow overflow-hidden">
-                  <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" />
+                <div className="mb-4">
+                  <img src={feature.image} alt={feature.title} className="w-28 h-28 object-contain" />
                 </div>
                 <h3 className="font-semibold text-lg text-primary mb-2">{feature.title}</h3>
                 <p className="text-sm text-foreground/70">{feature.description}</p>

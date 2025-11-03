@@ -37,9 +37,9 @@ export default function Home() {
         <div className="bg-gray-50">
           <ContactSection />
         </div>
-        <div className="bg-white">
+        {/* <div className="bg-white">
           <NewsletterSection />
-        </div>
+        </div> */}
       </main>
       <Footer />
     </div>

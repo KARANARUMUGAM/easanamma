@@ -16,9 +16,10 @@ export function TeachingsSection() {
   ]
 
   return (
-    <section className="py-16 sm:py-24 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-primary text-center mb-12">Featured Teachings</h2>
+    <section className="py-16 sm:py-24 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/Home_Page-bg.jpeg')" }}>
+      <div className="absolute inset-0"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="font-serif text-3xl sm:text-4xl font-bold text-center mb-12 h2-black">Featured Teachings</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {teachings.map((teaching) => (
@@ -28,7 +29,7 @@ export function TeachingsSection() {
               className="border-2 border-primary/30 divine-glow-hover transition-all duration-300"
             >
               <CardHeader>
-                <CardTitle className="font-serif text-2xl text-black">{teaching.title}</CardTitle>
+                <CardTitle className="font-serif text-2xl" style={{ background: "linear-gradient(to right, #ff6b00, #ffeb3b)", WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>{teaching.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base text-foreground/80 mb-6">{teaching.description}</CardDescription>

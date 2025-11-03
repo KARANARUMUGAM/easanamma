@@ -23,10 +23,11 @@ export function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/Home_Page-bg.jpeg')" }}>
+      <div className="absolute inset-0"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">Testimonials</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4 h2-black">Testimonials</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Hear from our spiritual community members</p>
         </div>
 
