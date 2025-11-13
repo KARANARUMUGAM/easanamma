@@ -7,7 +7,7 @@ export default function AboutEasanammaPage() {
       <Header />
       <main>
         {/* Banner Section */}
-        <section className="relative h-[400px] md:h-[500px] flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/2151262885.jpg')" }}>
+        <section className="relative h-[400px] md:h-[500px] flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/49.jpg')" }}>
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 text-center px-4">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">

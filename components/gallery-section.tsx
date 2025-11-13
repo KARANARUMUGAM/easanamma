@@ -1,32 +1,32 @@
 export function GallerySection() {
   const galleryImages = [
     {
-      src: "/spiritual-temple-meditation-hall.jpg",
+      src: "/2.jpg",
       alt: "Meditation Hall",
       title: "Sacred Meditation Space",
     },
     {
-      src: "/spiritual-guru-teaching-disciples.jpg",
+      src: "/5.jpg",
       alt: "Teaching Session",
       title: "Wisdom Teachings",
     },
     {
-      src: "/spiritual-ceremony-ritual-fire.jpg",
+      src: "/18.jpg",
       alt: "Sacred Ceremony",
       title: "Divine Ceremonies",
     },
     {
-      src: "/meditation-garden-peaceful-nature.jpg",
+      src: "/39.jpg",
       alt: "Meditation Garden",
       title: "Tranquil Gardens",
     },
     {
-      src: "/spiritual-community-gathering-satsang.jpg",
+      src: "/41.jpg",
       alt: "Community Gathering",
       title: "Satsang Gatherings",
     },
     {
-      src: "/spiritual-altar-deity-shrine.jpg",
+      src: "/46.jpg",
       alt: "Sacred Altar",
       title: "Divine Altar",
     },
@@ -68,7 +68,7 @@ export function GallerySection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-serif text-xl font-semibold text-white">{image.title}</h3>
+                  {/* <h3 className="font-serif text-xl font-semibold text-white">{image.title}</h3> */}
                 </div>
               </div>
             </div>

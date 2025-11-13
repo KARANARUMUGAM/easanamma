@@ -55,12 +55,18 @@ export function ContactSection() {
               </Card>
             </div>
 
-            <div className="h-[400px] rounded-lg overflow-hidden divine-glow">
-              <img
-                src="/map-location-pin-tamil-nadu-india.jpg"
-                alt="Gurukulam Location Map"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-[400px] rounded-lg overflow-hidden divine-glow border-2 border-primary/20">
+              <iframe
+                src="https://www.google.com/maps?q=Shree+Easanamma+Gurukulam,+Kotravail+Shivan+Kovil,+Muthandipatti,+Near+Sengipatti,+Thanjavur&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+                title="Shree Easanamma Gurukulam Location"
+              ></iframe>
             </div>
           </div>
         </div>

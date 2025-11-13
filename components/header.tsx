@@ -29,7 +29,6 @@ export function Header() {
     { name: "About Shree Easanamma", href: "/about-easanamma" },
     { name: "Chita Viruthi Nirodha", href: "/chita-viruthi-nirodha" },
     { name: "Panchaagni Vithai", href: "/panchaagni-vithai" },
-    { name: "Contact", href: "#contact" },
   ]
 
   const teachingSubItems = [
@@ -44,7 +43,7 @@ export function Header() {
       className={`sticky top-0 z-50 w-full border-b backdrop-blur transition-colors duration-300 ${
         scrolled
           ? "bg-white/95 supports-[backdrop-filter]:bg-white/80 border-border"
-          : "bg-gradient-to-r from-[#ff6b00] to-[#ffeb3b] border-[#FFD966]"
+          : "bg-gradient-to-r from-[#ff9142] to-[#ffeb3b] border-[#FFD966]"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,6 +90,12 @@ export function Header() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            <Link
+              href="#contact"
+              className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -136,6 +141,13 @@ export function Header() {
                 ))}
               </div>
             </div>
+            <Link
+              href="#contact"
+              className="block py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </nav>
         )}
       </div>

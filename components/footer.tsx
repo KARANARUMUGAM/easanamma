@@ -12,7 +12,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="py-20 md:py-28 min-h-[240px] bg-gradient-to-r from-[#ff6b00] to-[#ffeb3b]">
+    <footer className="py-20 md:py-28 min-h-[240px] bg-gradient-to-r from-[#ff9142] to-[#ffeb3b]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-4">
           <nav className="flex flex-wrap justify-center gap-6">

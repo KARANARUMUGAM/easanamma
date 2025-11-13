@@ -1,8 +1,16 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Sparkles, Heart, Brain, Mountain } from "lucide-react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function TeachingTrainingProgrammesPage() {
   const margas = [
@@ -270,6 +278,71 @@ export default function TeachingTrainingProgrammesPage() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section className="relative py-20 sm:py-28 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 md:w-80 md:h-80 opacity-5 bg-contain bg-no-repeat bg-right-top" style={{ backgroundImage: "url('/bg-1.png')" }}></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 md:w-80 md:h-80 opacity-5 bg-contain bg-no-repeat bg-left-bottom" style={{ backgroundImage: "url('/bg-2.png')" }}></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <div className="inline-block mb-4">
+                  <span className="text-primary text-sm font-semibold uppercase tracking-wider">Sacred Moments</span>
+                </div>
+                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+                  Gallery
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+                <p className="text-lg text-foreground/80 mt-6 max-w-2xl mx-auto">
+                  Glimpses of our spiritual journey, teachings, and sacred spaces
+                </p>
+              </div>
+
+              <div className="relative">
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className="w-full"
+                >
+                  <CarouselContent className="-ml-2 md:-ml-4">
+                    {[
+                      { src: "/2.jpg", alt: "Sacred Meditation Space" },
+                      { src: "/39.jpg", alt: "Tranquil Gardens" },
+                      { src: "/18.jpg", alt: "Divine Ceremonies" },
+                      { src: "/46.jpg", alt: "Divine Altar" },
+                      { src: "/49.jpg", alt: "Spiritual Gathering" },
+                      { src: "/50.jpg", alt: "Teaching Session" },
+                      { src: "/53.jpg", alt: "Sacred Ritual" },
+                    ].map((image, index) => (
+                      <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                        <div className="group relative overflow-hidden rounded-xl border-2 border-transparent hover:border-primary/30 transition-all duration-300 hover:shadow-2xl">
+                          <div className="relative aspect-[4/3] overflow-hidden">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              fill
+                              className="object-cover transition-transform duration-500 group-hover:scale-110"
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <div className="absolute bottom-0 left-0 right-0 p-6">
+                                <p className="text-white font-medium text-lg">{image.alt}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 hover:bg-white border-2 shadow-lg" />
+                  <CarouselNext className="hidden md:flex -right-12 bg-white/90 hover:bg-white border-2 shadow-lg" />
+                </Carousel>
+              </div>
             </div>
           </div>
         </section>

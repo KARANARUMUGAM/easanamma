@@ -23,7 +23,7 @@ export default function PanchaagniVithaiPage() {
               {/* Left Column - Image */}
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
                 <img 
-                  src="/spiritual-ceremony-ritual-fire.jpg" 
+                  src="/40.jpg" 
                   alt="Panchaagni Vithai" 
                   className="w-full h-full object-cover min-h-[400px] md:min-h-[500px]"
                 />
