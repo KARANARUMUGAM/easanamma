@@ -3,8 +3,14 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -24,6 +30,13 @@ export function Header() {
     { name: "Chita Viruthi Nirodha", href: "/chita-viruthi-nirodha" },
     { name: "Panchaagni Vithai", href: "/panchaagni-vithai" },
     { name: "Contact", href: "#contact" },
+  ]
+
+  const teachingSubItems = [
+    { name: "Karma Marga", href: "/karma-marga" },
+    { name: "Bhakti Marga", href: "/bhakti-marga" },
+    { name: "Jnana Marga", href: "/jnana-marga" },
+    { name: "Raja Marga", href: "/raja-marga" },
   ]
 
   return (
@@ -58,6 +71,26 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-medium text-foreground transition-colors hover:text-primary flex items-center gap-1 outline-none">
+                Teaching & Training Programmes
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link href="/teaching-training-programmes" className="cursor-pointer">
+                    Overview
+                  </Link>
+                </DropdownMenuItem>
+                {teachingSubItems.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link href={item.href} className="cursor-pointer">
+                      {item.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -79,6 +112,30 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <div className="py-2">
+              <div className="text-sm font-semibold text-foreground mb-2">
+                Teaching & Training Programmes
+              </div>
+              <div className="pl-4 space-y-1">
+                <Link
+                  href="/teaching-training-programmes"
+                  className="block py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Overview
+                </Link>
+                {teachingSubItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </nav>
         )}
       </div>
